@@ -1,0 +1,182 @@
+{
+    "searchParameters": {
+        "q": "tech",
+        "gl": "in",
+        "type": "news",
+        "engine": "google"
+    },
+    "news": [
+        {
+            "title": "Xi’s Embrace of China Tech CEOs Spurs Hope of Big Economic Shift",
+            "link": "https://www.bloomberg.com/news/articles/2025-02-18/xi-s-embrace-of-china-tech-ceos-spurs-hope-of-big-economic-shift",
+            "section": "China's Xi meets with Alibaba founder Jack Ma",
+            "date": "11 hours ago",
+            "source": "Bloomberg.com",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0kPQ4X-z4hAeL_g-O_sIRoJEd-Pa-2RtHxe5ghgIUg2T55kMfROXHLc&usqp=CAI&s",
+            "position": 1
+        },
+        {
+            "title": "In from the cold? Alibaba co-founder Jack Ma spotted among top tech bosses who met China’s Xi",
+            "link": "https://www.cnn.com/2025/02/17/tech/china-jack-ma-alibaba-meeting-hnk-intl/index.html",
+            "section": "China's Xi meets with Alibaba founder Jack Ma",
+            "date": "17 hours ago",
+            "source": "CNN",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-nS44HJ_Q1eIxumNbdLJggUdfJNcNvZ-BL5n2XlDV46O8zXmRUOYVtgM&usqp=CAI&s",
+            "position": 1
+        },
+        {
+            "title": "China's tech rally rests on 'hot money'",
+            "link": "https://www.reuters.com/technology/artificial-intelligence/chinas-tech-rally-rests-hot-money-2025-02-17/",
+            "section": "China's Xi meets with Alibaba founder Jack Ma",
+            "date": "1 day ago",
+            "source": "Reuters",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC4eH2EVcQeTW6fRLzSQI3-qQQzLlFiSaaWKTyZGynfiW_jAEe5itCEoQ&usqp=CAI&s",
+            "position": 1
+        },
+        {
+            "title": "Western tech firms adopt 'Anything but China' approach amid global tensions",
+            "link": "https://www.business-standard.com/world-news/anything-but-china-us-tech-companies-supply-chain-shift-away-trump-125021700365_1.html",
+            "section": "China's Xi meets with Alibaba founder Jack Ma",
+            "date": "1 day ago",
+            "source": "Business Standard",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUBdQhbr8vkzj6yxakdTSribQgD_wprp7CwMZkfE0xBzdZaFvZQBaj7Fw&usqp=CAI&s",
+            "position": 1
+        },
+        {
+            "title": "5 Arrested After Nepali Student's Death In Odisha Tech Institute Get Bail",
+            "link": "https://www.ndtv.com/india-news/5-arrested-after-nepali-students-death-in-odisha-tech-institute-get-bail-7741089",
+            "section": "B-Tech student from Nepal found dead in KIIT hostel",
+            "date": "2 hours ago",
+            "source": "NDTV",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgVzs2tx7MqTkUEnp5HNmOH_ezbfZ19xaIZGzHZCEGjTBi1WfgZrsho7Y&usqp=CAI&s",
+            "position": 2
+        },
+        {
+            "title": "B-Tech third-year student from Nepal found dead in KIIT hostel in Bhubaneswar",
+            "link": "https://timesofindia.indiatimes.com/city/bhubaneswar/b-tech-third-year-student-from-nepal-found-dead-in-kiit-hostel-in-bhubaneswar/articleshow/118328338.cms",
+            "section": "B-Tech student from Nepal found dead in KIIT hostel",
+            "date": "1 day ago",
+            "source": "Times of India",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTvdoNTicijcXhja2sPxYm1xy8zdVmgI8QDtUcktYsgbj82sYNe6spqPc&usqp=CAI&s",
+            "position": 2
+        },
+        {
+            "title": "B Tech third-year student from Nepal found dead in Odisha hostel",
+            "link": "https://www.newindianexpress.com/states/odisha/2025/Feb/17/b-tech-third-year-student-from-nepal-found-dead-in-odisha-hostel",
+            "section": "B-Tech student from Nepal found dead in KIIT hostel",
+            "date": "1 day ago",
+            "source": "The New Indian Express",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHH0rGdDXkuxACyy3DimjUBzUta00PPc4-zRDvWAXcJUXsjTveRWUd8GM&usqp=CAI&s",
+            "position": 2
+        },
+        {
+            "title": "Bhubaneswar: B Tech student from Nepal found dead in her hostel",
+            "link": "https://www.thehansindia.com/news/national/bhubaneswar-b-tech-student-from-nepal-found-dead-in-her-hostel-946704",
+            "section": "B-Tech student from Nepal found dead in KIIT hostel",
+            "date": "14 hours ago",
+            "source": "The Hans India",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXYoKvLx3KKKsU80PTbUv7MlieqBic7Ii8orGcA9gn7UxYmSkVpYM0pFE&usqp=CAI&s",
+            "position": 2
+        },
+        {
+            "title": "Tiruvallur to get 3 more rural tech centres",
+            "link": "https://timesofindia.indiatimes.com/city/chennai/tiruvallur-to-get-3-more-rural-tech-centres/articleshow/118366716.cms",
+            "snippet": "Chennai: To provide digital literacy and teach basic programming to govt school students in rural areas, IIT Madras Pravartak Technologies...",
+            "date": "8 minutes ago",
+            "source": "Times of India",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzTInyPqDgEceGiyqbaXf93KvRtD3VU17ZF3LOELWBMx5u1mUDMF2hWLA&usqp=CAI&s",
+            "position": 3
+        },
+        {
+            "title": "Transition VC invests $1.7 million in deep-tech start-up Dynolt",
+            "link": "https://www.thehindu.com/news/cities/bangalore/transition-vc-invests-17-million-in-deep-tech-start-up-dynolt-to-revolutionise-power-semiconductor-products/article69235535.ece",
+            "snippet": "Dynolt Technologies, a deep-tech power electronics start-up, has secured $1.7 million in a seed funding round led by Transition VC.",
+            "date": "2 hours ago",
+            "source": "The Hindu",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFc4GjSMpfQGZZlNJNVdKpfjXcs_LyI7IOQqlpOO5BCm2kRRXTikRKn3g&usqp=CAI&s",
+            "position": 4
+        },
+        {
+            "title": "Five tech podcasts to make sense of the world in 2025",
+            "link": "https://www.livemint.com/mint-lounge/business-of-life/top-tech-podcasts-2025-uncanny-valley-rabbit-hole-11739766233878.html",
+            "snippet": "Discover five essential tech podcasts that dissect trends, ethical dilemmas, and the impact of technology on society, offering insights for...",
+            "date": "13 hours ago",
+            "source": "mint",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx91tISw7Zd_QEy8-bDruZtt4ecn4-MhAsyvJhFhH2_2U1J6Z6iYzTOKs&usqp=CAI&s",
+            "position": 5
+        },
+        {
+            "title": "Navigating a career in tech: Why upskilling is the most crucial investment you can make in 2025",
+            "link": "https://bestcolleges.indiatoday.in/news-detail/navigating-a-career-in-tech-why-upskilling-is-the-most-crucial-investment-you-can-make-in-2025",
+            "snippet": "Tech Career Growth 2025: As technology rapidly evolves, staying ahead requires continuous learning and adaptation. Embrace technology...",
+            "date": "6 hours ago",
+            "source": "India Today",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBKLeL3qCccmP67Y0Ep9mLft-yp-aWpIT2atF5LlI_CgPN5I-DK6hRWlE&usqp=CAI&s",
+            "position": 6
+        },
+        {
+            "title": "World’s top influential women in tech",
+            "link": "https://www.hindustantimes.com/web-stories/trending/worlds-top-influential-women-in-tech-101739776323477.html",
+            "snippet": "By Sakshi Sah Published Feb 18, 2025. Hindustan Times Trending. Photo Credit: X/@Jasmine Anteunis. World's top influential women in tech. Hindustan Logo.",
+            "date": "19 hours ago",
+            "source": "Hindustan Times",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaJZFBGgLadrQ8yBAwihQ9J5tIfL35mknEUdJAKi97tWuDoX-MqSA6lCA&usqp=CAI&s",
+            "position": 7
+        },
+        {
+            "title": "Noida airport signs agreement with IT firm for tech infra",
+            "link": "https://www.hindustantimes.com/cities/noida-news/noida-airport-signs-agreement-with-it-firm-for-tech-infra-101739817978555.html",
+            "section": "News about Kyndryl • Noida Airport",
+            "date": "19 hours ago",
+            "source": "Hindustan Times",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6BBVEhSbQtvlCLefuQTWFPFghKfOVlDcavaAAebsgTrqP3bqJkjl_eeM&usqp=CAI&s",
+            "position": 8
+        },
+        {
+            "title": "Noida Airport Partners with Kyndryl for Tech Infrastructure",
+            "link": "https://money.rediff.com/news/market/noida-airport-partners-with-kyndryl-for-tech-infrastructure/22411920250218",
+            "section": "News about Kyndryl • Noida Airport",
+            "date": "2 hours ago",
+            "source": "Rediff MoneyWiz",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYwMiRnpUVSOXcjgWrZSiX1YQKiz3YclM1XgfPepIFkb0WFXAsrnRfCUc&usqp=CAI&s",
+            "position": 8
+        },
+        {
+            "title": "Noida International Airport: Kyndryl To Manage Tech Operations, Help Enhance Flyer Experience",
+            "link": "https://www.ndtvprofit.com/technology/noida-international-airport-kyndryl-to-manage-tech-operations-help-enhance-flyer-experience",
+            "section": "News about Kyndryl • Noida Airport",
+            "date": "1 day ago",
+            "source": "NDTV Profit",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfpHB4m_7Hd64V3tRBFRNbpAnEHMjg-XLPFUw0Rq3hUdWHvGL9we7p0a0&usqp=CAI&s",
+            "position": 8
+        },
+        {
+            "title": "Noida International Airport Partners With Kyndryl To Strengthen Cybersecurity And Tech Framework | Details",
+            "link": "https://english.jagran.com/uttar-pradesh/noida-jewar-international-airport-partners-with-kyndryl-to-strengthen-cybersecurity-and-tech-framework-details-10219304",
+            "section": "News about Kyndryl • Noida Airport",
+            "date": "7 hours ago",
+            "source": "Jagran English",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Dc2wZ7gpvPIZG0BPVGHZuzkhSDmYgtCpPJWXTC9RICJE5aO8vYxQB0U&usqp=CAI&s",
+            "position": 8
+        },
+        {
+            "title": "AI, humans and India's role in this tech revolution",
+            "link": "https://www.forbesindia.com/blog/technology/ai-humans-and-indias-role-in-this-tech-revolution-330750.html",
+            "snippet": "As AI becomes more ingrained in daily life, the collaboration between humans and machines will only grow stronger, with human data solutions...",
+            "date": "14 hours ago",
+            "source": "Forbes India",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8qCWHzNxz3JpOsRFWknszSesnY_8LWn9LQIMiTNqcSu_v_KBKXBqMp_8&usqp=CAI&s",
+            "position": 9
+        },
+        {
+            "title": "Trade Spotlight: How should you trade Tech Mahindra, Zomato, Ajanta Pharma, IndiGo, JSW Steel, and others...",
+            "link": "https://www.moneycontrol.com/news/business/markets/trade-spotlight-how-should-you-trade-tech-mahindra-zomato-ajanta-pharma-indigo-jsw-steel-and-others-on-february-19-12944446.html",
+            "snippet": "Rangebound trading is expected to continue in the upcoming sessions amid elevated volatility. Below are some trading ideas for the near...",
+            "date": "5 hours ago",
+            "source": "Moneycontrol",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLKYJAK03SgY6AMmEIApYzOb4G2Yi62JL-P_G9plzfqhIqFpm8aU6z2eU&usqp=CAI&s",
+            "position": 10
+        }
+    ],
+    "credits": 1
+}

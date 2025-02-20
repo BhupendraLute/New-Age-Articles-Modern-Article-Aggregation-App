@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                 String         @id @default(cuid())
+  clerkUserId        String         @unique
+  email              String         @unique
+  name               String?
+  favoriteCategories ArticleCategory[] @relation("FavoriteCategories")
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+}
+
+model Article {
+  id        String  @id @default(cuid())
+  title     String
+  link      String  @unique
+  imageUrl  String?
+  category  String
+  date      String? 
+  fetchedAt DateTime @default(now())
+}
+
+model ArticleCategory {
+  id     String @id @default(cuid())
+  name   String @unique
+  users  User[] @relation("FavoriteCategories")
+}

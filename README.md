@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 📰 New Age Articles
 
-First, run the development server:
+**New Age Articles** is a modern, dynamic web application designed to help users explore and stay updated with trending articles across various categories. Built with Next.js, Prisma, and PostgreSQL, this app offers smooth pagination, category-based filtering, and the ability for users to personalize their reading experience!
+
+---
+
+## 🚀 Features
+
+✅ **Article Aggregation:**  
+- Fetches and displays articles from various categories.  
+- Shows article titles, images, dates, and categories.  
+- Links directly to the original article source.  
+
+✅ **Category Management:**  
+- Users can explore new categories.  
+- Ability to add a new category of their choice.  
+- Filter articles by selected categories or view all articles.
+
+✅ **Pagination:**  
+- Seamless pagination that changes articles without modifying the URL.  
+- Ensures smooth navigation across multiple pages of articles.
+
+✅ **Authentication:**  
+- User authentication handled via Clerk.  
+- Each user has personalized categories and article preferences.
+
+✅ **Database Integration:**  
+- PostgreSQL database powered by Neon DB.  
+- Prisma ORM for efficient and type-safe database operations.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js, TypeScript, TailwindCSS
+- **Backend:** Next.js API routes, Prisma ORM
+- **Database:** PostgreSQL (Neon DB)
+- **Authentication:** Clerk
+- **State Management:** React hooks (useState, useEffect)
+
+---
+
+## 🧑‍💻 Installation
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/yourusername/new-age-articles.git
+cd new-age-articles
+```
+
+2. **Install dependencies:**
+
+```bash
+npm install
+```
+
+3. **Set up environment variables:**  
+
+Create a `.env.local` file in the root directory and add:
+
+```
+DATABASE_URL=your_postgresql_database_url
+NEXT_PUBLIC_CLERK_FRONTEND_API=your_clerk_frontend_api
+CLERK_API_KEY=your_clerk_api_key
+```
+
+4. **Generate Prisma Client & Apply Migrations:**
+
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+5. **Run the development server:**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✅ Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Deployment
 
-## Learn More
+You can deploy this project on Vercel seamlessly:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+vercel deploy
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Contributing
 
-## Deploy on Vercel
+Contributions, issues, and feature requests are welcome!  
+Feel free to open an issue or submit a pull request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🏷️ License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+🔥 **New Age Articles** — Stay informed, stay inspired. Happy reading! 🎉
