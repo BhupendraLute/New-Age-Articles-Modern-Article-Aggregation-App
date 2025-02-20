@@ -46,7 +46,7 @@
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/new-age-articles.git
+git clone https://github.com/BhupendraLute/New-Age-Articles-Modern-Article-Aggregation-App.git
 cd new-age-articles
 ```
 
