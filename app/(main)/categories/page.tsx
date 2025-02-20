@@ -4,27 +4,26 @@ import { CategoryCard } from "./components/CategoryCard";
 import ArticleCard from "@/components/ArticleCard";
 
 interface CategoriesPageProps {
-  searchParams: {
+  searchParams: Promise<{
     categoryPage?: string;
     articlePage?: string;
-  };
+  }>;
 }
 
-export default async function CategoriesPage({
-  searchParams,
-}: CategoriesPageProps) {
+export default async function CategoriesPage({ searchParams }: CategoriesPageProps) {
   const user = await checkUser();
 
   if (!user) {
     return <div>Please sign in to view categories!</div>;
   }
 
-  // Pagination setup
-  const categoryPage = Number(searchParams?.categoryPage) || 1;
-  const articlePage = Number(searchParams?.articlePage) || 1;
+  // Await the searchParams promise
+  const params = await searchParams;
+  const categoryPage = Number(params.categoryPage) || 1;
+  const articlePage = Number(params.articlePage) || 1;
   const pageSize = 8;
 
-  // Get user's favorite categories
+  // Fetch user's favorite categories
   const favoriteCategories = await db.user.findUnique({
     where: { clerkUserId: user.clerkUserId },
     include: {
@@ -32,13 +31,13 @@ export default async function CategoriesPage({
     },
   });
 
-  // Get all categories
+  // Fetch all categories
   const allCategories = await db.articleCategory.findMany();
 
   const userFavoriteCategoryIds =
     favoriteCategories?.favoriteCategories.map((cat) => cat.id) || [];
 
-  // Filter categories to show only non-favorited categories
+  // Filter out favorited categories
   const nonFavoriteCategories = allCategories.filter(
     (category) => !userFavoriteCategoryIds.includes(category.id)
   );
@@ -49,7 +48,7 @@ export default async function CategoriesPage({
     categoryPage * pageSize
   );
 
-  // Fetch relevant articles based on user’s favorite categories
+  // Fetch articles from favorite categories
   const relevantArticles = await db.article.findMany({
     where: {
       category: {
@@ -63,10 +62,8 @@ export default async function CategoriesPage({
     },
   });
 
-  // Total pages calculation
-  const totalCategoryPages = Math.ceil(
-    nonFavoriteCategories.length / pageSize
-  );
+  // Calculate total pages
+  const totalCategoryPages = Math.ceil(nonFavoriteCategories.length / pageSize);
   const totalArticlePages = Math.ceil(
     (await db.article.count({
       where: {
@@ -81,7 +78,7 @@ export default async function CategoriesPage({
     <div className="container mx-auto py-10 px-8">
       <h1 className="text-3xl font-bold mb-6">Categories</h1>
 
-      {/* Categories the user hasn't favorited yet */}
+      {/* Non-favorited categories */}
       <section className="mb-10">
         <h2 className="text-2xl font-semibold mb-4">Explore New Categories</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -91,13 +88,12 @@ export default async function CategoriesPage({
         </div>
       </section>
 
+      {/* Articles from favorite categories */}
       <section>
-        {/* Articles Section */}
         <h1 className="text-2xl font-bold mb-4">
           Articles from Your Favorite Categories
         </h1>
 
-        {/* Articles Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {relevantArticles.map((article) => (
             <ArticleCard
@@ -111,7 +107,7 @@ export default async function CategoriesPage({
           ))}
         </div>
 
-        {/* Pagination for relevant articles */}
+        {/* Pagination controls */}
         <div className="flex justify-center mt-6 space-x-2">
           {articlePage > 1 && (
             <a
@@ -134,3 +130,4 @@ export default async function CategoriesPage({
     </div>
   );
 }
+
