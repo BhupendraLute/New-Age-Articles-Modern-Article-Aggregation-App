@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/prisma';
 import { checkUser } from '@/lib/checkUser';
-import axios from 'axios';
 
 export async function POST(req: NextRequest) {
   const user = await checkUser();
