@@ -1,18 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { auth } from "@clerk/nextjs/server"; // Use server-side auth
-import { checkUser } from "@/lib/checkUser";
+import { auth } from "@clerk/nextjs/server"; 
 import { ModeToggle } from "@/components/ModeToggle";
-import { SignOutButton } from "@clerk/nextjs";
+import SignOutClient from "./SignOutClient";
 
 export const Header = async () => {
 	// Check if user is authenticated
 	const { userId }: { userId: string | null } = await auth();
-
-	// Optional: Check user in the database (if needed for roles/profile)
-	if (userId) {
-		await checkUser();
-	}
 
 	return (
 		<header className="w-full border-b bg-background fixed top-0 z-50">
@@ -28,21 +22,19 @@ export const Header = async () => {
 						Home
 					</Link>
 					<Link
-						href="/categories"
+						href="/profile"
 						className="font-medium hover:underline"
 					>
-						Categories
+						profile
 					</Link>
 				</nav>
 
-				{/* Authentication / Profile */}
+				{/* Authentication */}
 				<div className="flex items-center gap-4">
 					{userId ? (
 						<>
 							{/* SignOutButton (Client Component) */}
-							<SignOutButton>
-								<Button variant="default">Sign Out</Button>
-							</SignOutButton>
+							<SignOutClient />
 						</>
 					) : (
 						<>

@@ -8,27 +8,38 @@ datasource db {
 }
 
 model User {
-  id                 String         @id @default(cuid())
-  clerkUserId        String         @unique
-  email              String         @unique
+  id                 String            @id @default(cuid())
+  clerkUserId        String            @unique
+  email              String            @unique
   name               String?
   favoriteCategories ArticleCategory[] @relation("FavoriteCategories")
-  createdAt          DateTime       @default(now())
-  updatedAt          DateTime       @updatedAt
+  createdAt          DateTime          @default(now())
+  updatedAt          DateTime          @updatedAt
 }
 
 model Article {
-  id        String  @id @default(cuid())
-  title     String
-  link      String  @unique
-  imageUrl  String?
-  category  String
-  date      String? 
-  fetchedAt DateTime @default(now())
+  id             String          @id @default(cuid())
+  title          String
+  link           String          @unique
+  source         String?
+  description    String?
+  category       String
+  date           String?
+  fetchedAt      DateTime        @default(now())
+  articleSummary ArticleSummary?
 }
 
 model ArticleCategory {
-  id     String @id @default(cuid())
-  name   String @unique
-  users  User[] @relation("FavoriteCategories")
+  id    String @id @default(cuid())
+  name  String @unique
+  users User[] @relation("FavoriteCategories")
+}
+
+model ArticleSummary {
+  id        String   @id @default(cuid())
+  articleId String   @unique
+  article   Article  @relation(fields: [articleId], references: [id])
+  summary   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

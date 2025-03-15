@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { Button } from "./button";
+import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 
 interface PaginationProps {
   currentPage: number;
@@ -21,7 +22,7 @@ export const Pagination = ({ currentPage, totalPages }: PaginationProps) => {
         onClick={() => goToPage(currentPage - 1)}
         disabled={currentPage <= 1}
       >
-        Previous
+        <FaAnglesLeft />
       </Button>
 
       <span className="text-sm">
@@ -32,7 +33,7 @@ export const Pagination = ({ currentPage, totalPages }: PaginationProps) => {
         onClick={() => goToPage(currentPage + 1)}
         disabled={currentPage >= totalPages}
       >
-        Next
+        <FaAnglesRight />
       </Button>
     </div>
   );

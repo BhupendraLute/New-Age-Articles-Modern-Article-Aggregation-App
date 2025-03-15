@@ -23,15 +23,26 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Add category to user's favorites using Prisma
+    // remove category from user's favorites using Prisma
     await db.user.update({
       where: { clerkUserId: user.clerkUserId },
       data: {
         favoriteCategories: {
-          connect: { id: categoryId },
+          disconnect: { id: categoryId },
         },
       },
     });
+
+
+
+    // await db.user.update({
+    //   where: { clerkUserId: user.clerkUserId },
+    //   data: {
+    //     favoriteCategories: {
+    //       connect: { id: categoryId },
+    //     },
+    //   },
+    // });
 
     return NextResponse.json({ success: true });
   } catch (error) {

@@ -1,28 +1,33 @@
+import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/prisma";
-import { auth } from "@clerk/nextjs/server";
+import { checkUser } from "@/helpers/checkUser";
 
-export async function POST(req: Request) {
-  const { userId } = await auth();
-  if (!userId) return new Response("Unauthorized", { status: 401 });
+export async function GET(req: NextRequest) {
+	const user = await checkUser();
 
-  const { categoryIds } = await req.json();
+	if (!user) {
+		return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+	}
 
-  try {
-    // Update user's favorite categories
-    await db.user.update({
-      where: { clerkUserId: userId },
-      data: {
-        favoriteCategories: {
-          set: categoryIds.map((id: string) => ({ id })),
-        },
-      },
-    });
+	try {
+		const userData = await db.user.findUnique({
+			where: { id: user.id },
+			include: { favoriteCategories: true },
+		});
 
-    return new Response(JSON.stringify({ success: true }), {
-      status: 200,
-    });
-  } catch (error) {
-    console.error("Error updating favorite categories:", error);
-    return new Response("Internal Server Error", { status: 500 });
-  }
+		if (!userData) {
+			return NextResponse.json(
+				{ error: "No favorite categories found" },
+				{ status: 404 }
+			);
+		}
+
+		return NextResponse.json(userData.favoriteCategories);
+	} catch (error) {
+		console.error(error);
+		return NextResponse.json(
+			{ error: "Failed to fetch favorite categories" },
+			{ status: 500 }
+		);
+	}
 }

@@ -1,6 +1,6 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { User } from "@prisma/client";
-import { db } from "./prisma";
+import { db } from "../lib/prisma";
 
 
 export const checkUser = async (): Promise<User | null> => {
@@ -13,13 +13,10 @@ export const checkUser = async (): Promise<User | null> => {
       return null;
     }
 
-    // Check if the user already exists in the database, including favorite categories
-    const loggedInUser = await db.user.findUnique({
+    // Check if the user already exists in the database
+    const loggedInUser = await db.user.findFirst({
       where: {
         clerkUserId: user.id,
-      },
-      include: {
-        favoriteCategories: true, // Include favorite categories in the query
       },
     });
 
@@ -48,6 +45,5 @@ export const checkUser = async (): Promise<User | null> => {
     return newUser;
   } catch (error) {
     console.error("Error checking or creating user:", error);
-    return null;
   }
 };

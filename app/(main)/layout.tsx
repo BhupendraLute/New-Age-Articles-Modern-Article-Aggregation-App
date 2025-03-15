@@ -1,4 +1,6 @@
 import { Header } from "@/components/Header";
+import StoreProvider from "@/components/StoreProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function MainLayout({
 	children,
@@ -6,9 +8,12 @@ export default function MainLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<div>
-			<Header />
-			<main className="mt-14">{children}</main>
-		</div>
+		<StoreProvider>
+			<div>
+				<Header />
+				<main className="mt-14">{children}</main>
+				<Toaster />
+			</div>
+		</StoreProvider>
 	);
 }
