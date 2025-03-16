@@ -62,8 +62,14 @@ Create a `.env.local` file in the root directory and add:
 
 ```
 DATABASE_URL=your_postgresql_database_url
-NEXT_PUBLIC_CLERK_FRONTEND_API=your_clerk_frontend_api
 CLERK_API_KEY=your_clerk_api_key
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_api_key
+CLERK_SECRET_KEY=clerk_secret_key
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+SERPER_API_KEY=Your_api_key
+FIRECRAWL_API_KEY=Your_api_key
+GEMINI_API_KEY=your_api_key
 ```
 
 4. **Generate Prisma Client & Apply Migrations:**
