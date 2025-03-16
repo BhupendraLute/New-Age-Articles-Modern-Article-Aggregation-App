@@ -4,11 +4,8 @@ import { db } from "@/lib/prisma";
 import { scrapeData } from "@/helpers/firecrawl";
 import summarizeArticle from "@/helpers/geminiapi";
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
-  const { id } = await params; 
+export async function GET(req: NextRequest) {
+  const id = req.nextUrl.pathname.split("/")[3];
 
   if (!id) {
     return NextResponse.json({ error: "Article ID is required" }, { status: 400 });
@@ -29,7 +26,6 @@ export async function GET(
       return NextResponse.json({ error: "Article not found" }, { status: 404 });
     }
 
-    // Check if summary already exists
     const existingSummary = await db.articleSummary.findUnique({
       where: { articleId: id },
     });
@@ -59,7 +55,6 @@ export async function GET(
       );
     }
 
-    // Store the summary in the database
     await db.articleSummary.create({
       data: {
         articleId: id,
