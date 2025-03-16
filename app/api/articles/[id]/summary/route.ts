@@ -10,6 +10,10 @@ export async function GET(
 ) {
   const { id } = await params;
 
+  if (!id) {
+    return NextResponse.json({ error: "Article ID is required" }, { status: 400 });
+  }
+
   try {
     const user = await checkUser();
     if (!user) {
@@ -37,7 +41,7 @@ export async function GET(
       );
     }
 
-    const articleData: any  = await scrapeData(article.link);
+    const articleData: any = await scrapeData(article.link);
 
     if (!articleData || !articleData.markdown) {
       return NextResponse.json(
@@ -68,7 +72,7 @@ export async function GET(
       { status: 200 }
     );
   } catch (error: any) {
-    console.error("Error in /api/articles route:", error);
+    console.error("Error in /api/articles/[id]/summary:", error);
     return NextResponse.json(
       { error: error?.message || "Internal server error" },
       { status: 500 }
