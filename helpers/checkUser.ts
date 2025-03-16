@@ -3,7 +3,7 @@ import { User } from "@prisma/client";
 import { db } from "../lib/prisma";
 
 
-export const checkUser = async (): Promise<User | null> => {
+export const checkUser = async () => {
   try {
     // Get the current user from Clerk
     const user = await currentUser();
@@ -41,6 +41,10 @@ export const checkUser = async (): Promise<User | null> => {
         favoriteCategories: true,
       },
     });
+
+    if (!newUser) {
+      throw new Error("Failed to create user");
+    }
 
     return newUser;
   } catch (error) {
