@@ -90,10 +90,10 @@ export default function ArticleCard({
 						{isLoading ? "Loading..." : "View Summary"}
 					</Button>
 				</SheetTrigger>
-				<SheetContent side={"bottom"} className="w-full max-h-screen overflow-y-scroll mx-auto p-8">
+				<SheetContent side={"bottom"} className="w-full max-h-[85vh] overflow-y-scroll mx-auto p-8">
 					<SheetHeader className="mx-auto sm:mx-4 md:mx-10">
 						<SheetTitle className="text-center text-3xl">Article Summary</SheetTitle>
-						<SheetDescription className="text-xl text-[#140f13] dark:text-white mt-4 text-justify">
+						<SheetDescription className="text-xl text-[#231a22] dark:text-gray-400 mt-4 text-justify">
 							{summary || "Loading summary..."}
 						</SheetDescription>
 					</SheetHeader>
